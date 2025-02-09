@@ -298,7 +298,7 @@ Valine:
   appId: "aSDXzLSlip0GMsEfyZt3HX00-gzGzoHsz"
   appKey: "whnXfnjcoKbQyq2WdSJzrXFZ"
   # 必须设置, 国内版本需域名备案
-  serverURLs: 
+  serverURLs:
   placeholder: "你是我一生只会遇见一次的惊喜..."
   avatar: "mm"
   meta: "nick,mail,link"
@@ -307,6 +307,7 @@ Valine:
   lang: "zh-cn"
   visitor: true
   enableQQ: true
+  recordIP: true  # 是否记录评论者IP
 
 # ---- Waline配置 ----
 Waline:
