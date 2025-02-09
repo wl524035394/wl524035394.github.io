@@ -302,7 +302,7 @@ Valine:
   placeholder: "你是我一生只会遇见一次的惊喜..."
   avatar: "monsterid"
   meta: ['nick','mail','link']
-  requiredFields: ["nick","mail"],
+  requiredFields: ["nick","mail"]
   pageSize: 5
   lang: "zh-CN"
   visitor: true
