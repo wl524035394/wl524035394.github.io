@@ -7,7 +7,7 @@ GitHubRepositories: "wl524035394.github.io"
 
 # ---- 基础信息配置 ----
 # 博主名称, 文章后缀和主页图片上都会使用此名称
-User: "ilonge's blog"
+User: "iLonge"
 # 用户头像URL
 UserAvatar: "/image/sidebar/avatar.png"
 # 创建时间
@@ -454,7 +454,7 @@ Font:
 
 # ---- 文章尾缀配置 ----
 Suffix: 
-  about: "简单地活着, 肆意又精彩."
+  about: "爱生活，iLonge。"
 
 
 # ---- 主题信息配置 ----
