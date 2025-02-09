@@ -3,29 +3,38 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
+title: iLonge
+subtitle: '爱生活，爱隆哥'
 description: ''
-keywords:
-author: John Doe
+keywords: ilonge blog | ilonge.cn | 隆哥
+author: ilonge
 language: en
-timezone: ''
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 urls: http://ilonge.cn
-permalink: :year/:month/:day/:title/
+# permalink: :year/:month/:day/:title/
+permalink: posts/:abbrlink/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
+abbrlink:
+  alg: crc32      #support crc16(default) and crc32
+  rep: dec        #support dec(default) and hex
+# 设置 RSS
+feed:
+  type: atom
+  path: atom.xml
+  limit: 10
 
 # Directory
 source_dir: source
 public_dir: public
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
+tag_dir: tag
+archive_dir: archive
+category_dir: category
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
@@ -96,7 +105,7 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: LiveForCode
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
