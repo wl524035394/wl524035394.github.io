@@ -1,8 +1,8 @@
 # ---- GitHub文件源配置 ----
 # GitHub用户名(不是昵称), 注意大小写
-GitHubUserName: "first19326"
+GitHubUserName: "wl524035394"
 # GitHub主题仓库名称
-GitHubRepositories: "Hexo-LiveForCode"
+GitHubRepositories: "wl524035394.github.io"
 
 
 # ---- 基础信息配置 ----
@@ -207,7 +207,7 @@ MenuLink:
   -
     name: "知乎"
     icon: "icon-zhihu"
-    href: "https://zhihu.com/people/worstone-29"
+    href: "https://zhihu.com/people/longe-40"
     class: ""
     target: "_blank"
     image: ""
@@ -235,7 +235,7 @@ MenuLink:
   -
     name: "GitHub"
     icon: "icon-github"
-    href: "https://github.com/first19326"
+    href: "https://github.com/wl524035394"
     class: ""
     target: "_blank"
     image: ""
@@ -300,11 +300,11 @@ Valine:
   # 必须设置, 国内版本需域名备案
   serverURLs:
   placeholder: "你是我一生只会遇见一次的惊喜..."
-  avatar: "mm"
-  meta: "nick,mail,link"
-  requiredFields: "nick,mail"
+  avatar: "monsterid"
+  meta: ['nick','mail','link']
+  requiredFields: ["nick","mail"],
   pageSize: 5
-  lang: "zh-cn"
+  lang: "zh-CN"
   visitor: true
   enableQQ: true
   recordIP: true  # 是否记录评论者IP
