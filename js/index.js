@@ -1,15 +1,15 @@
 {
     window.defaultConfig = {
-        GitHubUserName: 'first19326',
-        GitHubRepositories: 'Hexo-LiveForCode',
-        User: 'LiveForCode',
+        GitHubUserName: 'wl524035394',
+        GitHubRepositories: 'wl524035394.github.io',
+        User: 'iLonge',
         UserAvatar: '/image/sidebar/avatar.jpg',
         WebsiteStartDate: '2020-01-01',
         Home: 'javascript:;',
         WebsiteTitleBlur: '(◍´꒳`◍) Hi, Live For Code',
         WebsiteTitleBlurTimeOut: 500,
         WebsiteTitleFocus: '(*´∇｀*) 欢迎回来!',
-        WebsiteTitleFocusTimeOut: 1000,
+        WebsiteTitleFocusTimeOut: 800,
         WebsiteFavicon: {
             light: '/image/website/logo/logo.png',
             dark: '/image/website/logo/logo-dark.png'
