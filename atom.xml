@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>iLonge</title>
   
-  <subtitle>爱生活，爱隆哥</subtitle>
+  <subtitle>爱生活，iLonge</subtitle>
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-02-09T04:56:09.618Z</updated>
+  <updated>2025-02-10T15:34:53.059Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My Gallery</title>
+    <link href="http://example.com/2025/02/10/My-Gallery/"/>
+    <id>http://example.com/2025/02/10/My-Gallery/</id>
+    <published>2025-02-10T14:09:16.000Z</published>
+    <updated>2025-02-10T15:34:53.059Z</updated>
+    
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>My New Post</title>
+    <link href="http://example.com/2025/02/10/My-New-Post/"/>
+    <id>http://example.com/2025/02/10/My-New-Post/</id>
+    <published>2025-02-10T13:50:17.000Z</published>
+    <updated>2025-02-10T15:34:53.059Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="My-New-Post"><a href="#My-New-Post" class="headerlink" title="My New Post"></a>My New Post</h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;My-New-Post&quot;&gt;&lt;a href=&quot;#My-New-Post&quot; class=&quot;headerlink&quot; title=&quot;My New Post&quot;&gt;&lt;/a&gt;My New Post&lt;/h2&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>Hello World</title>
