@@ -128,7 +128,7 @@ Error:
 # 菜单消息
 MenuNotice:
   enable: true
-  notice: "简单地活着，肆意而又精彩！"
+  notice: "欢迎来到我的博客，很高兴见到你！"
   speed: 20
 # 菜单列表
 MenuList:
@@ -214,7 +214,7 @@ MenuLink:
   -
     name: "微博"
     icon: "icon-weibo"
-    href: "https://weibo.com/u/5749847477"
+    href: "https://weibo.com/u/1786198674"
     class: ""
     target: "_blank"
     image: ""
@@ -229,9 +229,9 @@ MenuLink:
     name: "微信"
     icon: "icon-wechat"
     href: "javascript:;"
-    class: ""
+    class: "image"
     target: "_self"
-    image: ""
+    image: "/image/sidebar/wechat.png"
   -
     name: "GitHub"
     icon: "icon-github"
@@ -245,7 +245,7 @@ MenuLink:
 # 页脚样式
 FooterStyle: 2
 # 页脚标语
-BottomText: "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>【人生若只如初见<span><i class='iconfont icon-like-fill'></i></span>何事秋风悲画扇】</div><div>&copy; 2020-2023 WorstOne. All Rights Reserved.</div>"
+BottomText: "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>用微笑😊面对生活<span></span>生活也会对你报以微笑<span style='color: red;'>❤</span></div><div>&copy; 2025 WorstOne. All Rights Reserved.</div>"
 
 
 # ---- 控制台输出 ----
