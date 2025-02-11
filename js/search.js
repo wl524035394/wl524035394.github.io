@@ -39,7 +39,8 @@ $(document).ready(function () {
             hitsPerPage : searchSettings.hits.page || 10,
             templates   : {
                 item: function (data) {
-                    let link = data.permalink ? data.permalink : ('/' + data.path);
+                    let link = window.localtion + '/' + data.path;
+                    console.log(link)
                     return ('<a href="' + link + '" class="search-hit-link">' + data._highlightResult.title.value + '</a>');
                 },
                 empty: function (data) {
