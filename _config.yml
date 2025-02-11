@@ -13,10 +13,10 @@ timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-urls: http://ilonge.cn
+urls: https://ilonge.cn
 permalink: :year/:month/:day/:title/
 # permalink: posts/:abbrlink/
-permalink_defaults:
+permalink_defaults: 
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: true # Set to false to remove trailing '.html' from permalinks
@@ -114,3 +114,8 @@ deploy:
   repo: https://github.com/wl524035394/wl524035394.github.io
   # example, https://github.com/hexojs/hexojs.github.io
   branch: main
+
+algolia:
+  applicationID: OA1S361Y36 # 对应Application ID
+  apiKey: 8ff306535844de1dfe36adfa8e96b57b # 对应Search-Only API Key
+  indexName: ilonge # 创建的那个索引名称

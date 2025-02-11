@@ -273,11 +273,10 @@ Donate:
   wechat : "https://cdn.jsdelivr.net/gh/first19326/cdn@master/static/image/donate/wechat.png"
 
 
-# ---- Algolia配置 ----
 Search:
-  applicationID: "010C3EANT8"
-  apiKey: "c7abab9f11b79102b9aff7fe6d41447d"
-  indexName: "Notes"
+  applicationID: "OA1S361Y36"
+  apiKey: "8ff306535844de1dfe36adfa8e96b57b"
+  indexName: "ilonge"
   hits:
     page: 10
   labels:
