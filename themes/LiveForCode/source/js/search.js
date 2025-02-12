@@ -39,8 +39,8 @@ $(document).ready(function () {
             hitsPerPage : searchSettings.hits.page || 10,
             templates   : {
                 item: function (data) {
-                    // let link = data.permalink ? data.permalink : ('/' + data.path);
-                    let link = data.permalink ? window.location + data.permalink.replace(/^http:\/\/[^\/]+\//, '') : ('/' + data.path);
+                    let link = '';
+                    link = data.permalink ? window.location.origin + data.permalink.replace(/^http:\/\/example\.com\//, '/') : ('/' + data.path);
                     return ('<a href="' + link + '" class="search-hit-link">' + data._highlightResult.title.value + '</a>');
                 },
                 empty: function (data) {
