@@ -9,8 +9,8 @@
         <br>
         <span class="suffix-box-title"><%- __('suffix.about') %></span><%- post.about ? post.about : theme.Suffix.about %>
         <br>
-        <span class="suffix-box-title"><%- __('suffix.theme') %></span><a href="<%- theme.Theme.url %>" target="_blank"><%- theme.Theme.name %></a>
-        <br>
+        <!-- <span class="suffix-box-title"><%- __('suffix.theme') %></span><a href="<%- theme.Theme.url %>" target="_blank"><%- theme.Theme.name %></a>
+        <br> -->
         <span class="suffix-box-title"><%- __('suffix.copyright.title') %></span><% if (post.copyright == 'prohibit') { %><%- __('suffix.copyright.prohibit') %><% } else if (post.copyright == 'reproduce') { %><%- __('suffix.copyright.reproduce') %><% } else { %><%- __('suffix.copyright.default') %><% } %>
         <br>
     </div>

@@ -461,3 +461,8 @@ Suffix:
 Theme: 
   url: "https://github.com/first19326/Hexo-LiveForCode"
   name: "Hexo - Live For Code"
+
+post_asset_folder: true
+marked:
+  prependRoot: true
+  postAsset: true

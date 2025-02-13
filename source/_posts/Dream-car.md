@@ -1,11 +1,16 @@
 ---
 title: Dream car
 date: 2025-02-10 21:50:17
-tags: Three.js
+tags: 
+- Three.js
+- xiaomi su7
+category: WebGL
 ---
 # Dream car 
 
 ### xiaomi SU7
+一个简单的3D 汽车模型展示场景与原理；主要是模型的加载，选配材质和物理材质的设置，以及应用灯光实现的效果。
+<!-- more -->
 
 ![xiaomi SU7](https://s1.xiaomiev.com/activity-outer-assets/0328/images/su7/su7_1_20241226.jpg "SU7")
 ``` bash
@@ -286,4 +291,6 @@ const back = () => {
   <div ref="guiContainer"></div>
 </template>
 ```
+### 效果图：
+
 ![xiaomi SU7](/image/website/xiaomiSU7.png)
