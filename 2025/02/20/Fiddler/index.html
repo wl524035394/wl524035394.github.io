@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <title>
         
-            归档
+            Fiddler 入门使用教程
         
     </title>
     <link rel="shortcut icon" href="#"/>
@@ -33,16 +33,40 @@
 </head>
 <body>
     <a id="cover"></a>
-    <link type="text/css" rel="stylesheet" href="/css/archive.css">
-<script src="https://api.vvhan.com/api/script/yinghua"></script>
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
 <div id="header" class="header">
     <div class="vertical">
         <div class="inner">
             
-                <h1 class="header-subtitle">归档</h1>
+                <h1 class="header-subtitle">Fiddler 入门使用教程</h1>
                 <div class="header-subinfo">
-                    <p class="article-info-text Chinese"></p>
-                    <p class="article-info-text English"></p>                  
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2025-02-20
+                        </span>
+                        
+                            
+                                <span id="/2025/02/20/Fiddler/" class="leancloud_visitors" data-flag-title="Fiddler 入门使用教程">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2025/02/20/Fiddler/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                        
+                            <span class="category-color">工具</span>
+                        
+                    
+                    
+                        
+                            <span class="tag-color">Fiddler</span>
+                        
+                    
                 </div>
             
         </div>
@@ -51,67 +75,76 @@
 </div>
 <div id="container">
     
-        
-            <!-- 归档页面、分类归档页面、标签归档页面 -->
-            <div class="articles">
-                <div class="articles-wrap">
-                    <span class="archive-move-on"></span>
-                    <span class="archive-counter">
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h2 id="Fiddler简介"><a href="#Fiddler简介" class="headerlink" title="Fiddler简介"></a>Fiddler简介</h2><p>Fiddler是一个强大的HTTP抓包工具，它能够捕获并查看所有通过计算机的HTTP和HTTPS流量。Fiddler可以用来调试web应用程序，查看网络请求和响应，分析网络性能，以及进行安全测试。<br>实现原理是以代理服务器的方式工作，代理就是在客户端和服务器之间设置一道关卡，客户端先将请求数据发送出去后，代理服务器会将数据包进行拦截，代理服务器再冒充客户端发送数据到服务器；同理，服务器将响应数据返回，代理服务器也会将数据拦截，再返回给客户端。（浏览器 &lt; -&gt; Fiddler &lt; -&gt; 服务器）</p>
+<p><img src="/2025/02/20/Fiddler/1338662142991310848.png" alt="img"></p>
+<h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h4><p><a href="https://[www.telerik.com/fiddler](https://soft.aijiaer11.cn/soft/4173.html?bd_vid=7754815383310687671)">https:&#x2F;&#x2F;<a target="_blank" rel="noopener" href="https://soft.aijiaer11.cn/soft/4173.html?bd_vid=7754815383310687671">www.telerik.com/fiddler</a></a></p>
+<h2 id="Fiddler的使用"><a href="#Fiddler的使用" class="headerlink" title="Fiddler的使用"></a>Fiddler的使用</h2><h4 id="一、Fiddler中的设置："><a href="#一、Fiddler中的设置：" class="headerlink" title="一、Fiddler中的设置："></a>一、Fiddler中的设置：</h4><p><img src="/2025/02/20/Fiddler/1340125925504884736.png" alt="img1"><br><img src="/2025/02/20/Fiddler/1340134901340610560.png" alt="img2">!<br><img src="/2025/02/20/Fiddler/1340136688831340544.png" alt="img3"><br><img src="/2025/02/20/Fiddler/1340138878295777280.png" alt="img4"><br><img src="/2025/02/20/Fiddler/1340140536794882048.png" alt="img5"></p>
+<h4 id="二、移动设备上的设置："><a href="#二、移动设备上的设置：" class="headerlink" title="二、移动设备上的设置："></a>二、移动设备上的设置：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">移动设备必须和电脑（开热点）连接同一个网络</span><br><span class="line">必须在同一局域网内，设置移动设备代理转发，</span><br><span class="line">将移动设备上的数据流转发到我们的fiddler的工具上，</span><br><span class="line">由fiddler工具访问网络从而获取到我们想要的内容。</span><br><span class="line">1.手机安装证书，在浏览器中输入地址和端口号，如：http://192.168.1.101:8888，</span><br><span class="line">2.在页面中点击“FilddlerRoot certificate”下载证书，下载后点击安装证书。</span><br><span class="line">3.安卓凭据用途选择 “VPN和应用”</span><br><span class="line">4.连上电脑的热点之后，进行手机上的设置：</span><br><span class="line">（1) HTTP代理：配置代理--&gt;手动</span><br><span class="line">（2）服务器：电脑的IP地址--&gt;端口：8888</span><br></pre></td></tr></table></figure>
+<h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><p><img src="/2025/02/20/Fiddler/1340202336890560512.png" alt="img6"><br><img src="/2025/02/20/Fiddler/1340202938286645248.png" alt="img6"><br><img src="/2025/02/20/Fiddler/1340205645454024704.png" alt="img6"><br><img src="/2025/02/20/Fiddler/1340205987025559552.png" alt="img6"></p>
+<p>其他需要使用过滤规则，性能测试，配置参数等具体请自行百度，本篇只是入门篇。</p>
+<hr>
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.png" alt="iLonge">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>iLonge
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/2025/02/20/Fiddler/" target="_blank">Fiddler 入门使用教程</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>爱生活，iLonge。
+        <br>
+        <!-- <span class="suffix-box-title">关于主题：</span><a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+        <br> -->
+        <span class="suffix-box-title">版权声明：</span>创作不易，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                    <div class="category">
+                        分类：
                         
-                            目前共计 4 篇日志，继续加油！
+                            <a href="/category/%E5%B7%A5%E5%85%B7/">工具</a>
                         
-                    </span>
-                    
-                    
+                    </div>
+                
+                
+                    <div class="tag">
+                        标签：
                         
-                            <div class="archive-title">
-                                <h2 class="archive-year">2025</h2>
-                            </div>
-                            
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/2025/02/20/Fiddler/"><span>Fiddler 入门使用教程</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-20</span>
-                                </div>
-                            </div>
-                        </div>
+                            <a href="/tag/Fiddler/">Fiddler</a>
+                        
+                    </div>
+                
+                <div class="article-prev-next">
                     
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/2025/02/13/PonitLight/"><span>PonitLight</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-13</span>
-                                </div>
-                            </div>
-                        </div>
                     
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/2025/02/10/Dream-car/"><span>Dream car</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-10</span>
-                                </div>
-                            </div>
-                        </div>
-                    
-                           
-                        <div class="article">
-                            <div class="article-header">
-                                <h1 class="article-title"><a href="/2025/02/10/Hexo/"><span>Hexo</span></a></h1>
-                                <div class="article-meta">
-                                    <span class="article-time">02-10</span>
-                                </div>
-                            </div>
-                        </div>
+                        <a href="/2025/02/13/PonitLight/" class="next-prefix">» </a> 下一篇：    <a href="/2025/02/13/PonitLight/" title="发布于 2025-02-13 10:54">PonitLight</a>
                     
                 </div>
             </div>
             
+    <div class="article-comments">
         
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
     
 </div>
     <div id="footer">
@@ -149,7 +182,7 @@
                     
                         <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
                     
-                        <li class=" active "><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
+                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
                     
                         <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
                     
