@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-02-20T05:13:57.955Z</updated>
+  <updated>2025-02-20T05:18:15.693Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2025/02/20/Fiddler/"/>
     <id>http://example.com/2025/02/20/Fiddler/</id>
     <published>2025-02-20T04:13:50.000Z</published>
-    <updated>2025-02-20T05:13:57.955Z</updated>
+    <updated>2025-02-20T05:18:15.693Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Fiddler简介"><a href="#Fiddler简介" class="headerlink" title="Fiddler简介"></a>Fiddler简介</h2><p>Fiddler是一个强大的HTTP抓包工具，它能够捕获并查看所有通过计算机的HTTP和HTTPS流量。Fiddler可以用来调试web应用程序，查看网络请求和响应，分析网络性能，以及进行安全测试。<br>实现原理是以代理服务器的方式工作，代理就是在客户端和服务器之间设置一道关卡，客户端先将请求数据发送出去后，代理服务器会将数据包进行拦截，代理服务器再冒充客户端发送数据到服务器；同理，服务器将响应数据返回，代理服务器也会将数据拦截，再返回给客户端。（浏览器 &lt; -&gt; Fiddler &lt; -&gt; 服务器）</p><p><img src="/2025/02/20/Fiddler/1338662142991310848.png" alt="img"></p><h4 id="下载地址"><a href="#下载地址" class="headerlink" title="下载地址"></a>下载地址</h4><p><a href="https://[www.telerik.com/fiddler](https://soft.aijiaer11.cn/soft/4173.html?bd_vid=7754815383310687671)">https:&#x2F;&#x2F;<a href="https://soft.aijiaer11.cn/soft/4173.html?bd_vid=7754815383310687671">www.telerik.com/fiddler</a></a></p><h2 id="Fiddler的使用"><a href="#Fiddler的使用" class="headerlink" title="Fiddler的使用"></a>Fiddler的使用</h2><h4 id="一、Fiddler中的设置："><a href="#一、Fiddler中的设置：" class="headerlink" title="一、Fiddler中的设置："></a>一、Fiddler中的设置：</h4><p><img src="/2025/02/20/Fiddler/1340125925504884736.png" alt="img1"><br><img src="/2025/02/20/Fiddler/1340134901340610560.png" alt="img2">!<br><img src="/2025/02/20/Fiddler/1340136688831340544.png" alt="img3"><br><img src="/2025/02/20/Fiddler/1340138878295777280.png" alt="img4"><br><img src="/2025/02/20/Fiddler/1340140536794882048.png" alt="img5"></p><h4 id="二、移动设备上的设置："><a href="#二、移动设备上的设置：" class="headerlink" title="二、移动设备上的设置："></a>二、移动设备上的设置：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">移动设备必须和电脑（开热点）连接同一个网络</span><br><span class="line">必须在同一局域网内，设置移动设备代理转发，</span><br><span class="line">将移动设备上的数据流转发到我们的fiddler的工具上，</span><br><span class="line">由fiddler工具访问网络从而获取到我们想要的内容。</span><br><span class="line">1.手机安装证书，在浏览器中输入地址和端口号，如：http://192.168.1.101:8888，</span><br><span class="line">2.在页面中点击“FilddlerRoot certificate”下载证书，下载后点击安装证书。</span><br><span class="line">3.安卓凭据用途选择 “VPN和应用”</span><br><span class="line">4.连上电脑的热点之后，进行手机上的设置：</span><br><span class="line">（1) HTTP代理：配置代理--&gt;手动</span><br><span class="line">（2）服务器：电脑的IP地址--&gt;端口：8888</span><br></pre></td></tr></table></figure><h2 id="抓包"><a href="#抓包" class="headerlink" title="抓包"></a>抓包</h2><p><img src="/2025/02/20/Fiddler/1340202336890560512.png" alt="img6"><br><img src="/2025/02/20/Fiddler/1340202938286645248.png" alt="img6"><br><img src="/2025/02/20/Fiddler/1340205645454024704.png" alt="img6"><br><img src="/2025/02/20/Fiddler/1340205987025559552.png" alt="img6"></p><p>其他需要使用过滤规则，性能测试，配置参数等具体请自行百度，本篇只是入门篇。</p><hr>]]></content>
     
