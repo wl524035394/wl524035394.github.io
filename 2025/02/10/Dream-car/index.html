@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, shrink-to-fit=no">
+    <meta name="referrer" content="origin">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <title>
+        
+            Dream car
+        
+    </title>
+    <link rel="shortcut icon" href="#"/>
+
+    <link type="text/css" rel="stylesheet" href="/font/LongCang.css">
+    <link type="text/css" rel="stylesheet" href="/font/Monda.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSansSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/NotoSerifSC.css">
+    <link type="text/css" rel="stylesheet" href="/font/Playball.css">
+    <link type="text/css" rel="stylesheet" href="/font/PTMono.css">
+    <link type="text/css" rel="stylesheet" href="/font/Roboto.css">
+    <link type="text/css" rel="stylesheet" href="/font/RobotoSlab.css">
+    <link type="text/css" rel="stylesheet" href="/font/Rosario.css">
+    <link type="text/css" rel="stylesheet" href="/font/UbuntuMono.css">
+
+    <link type="text/css" rel="stylesheet" href="/css/base.css">
+    <link type="text/css" rel="stylesheet" href="/css/code.css">
+
+    <script type="text/javascript" src="/js/jquery-3.4.1.min.js"></script>
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="iLonge" type="application/atom+xml">
+</head>
+<body>
+    <a id="cover"></a>
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
+<div id="header" class="header">
+    <div class="vertical">
+        <div class="inner">
+            
+                <h1 class="header-subtitle">Dream car</h1>
+                <div class="header-subinfo">
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2025-02-10
+                        </span>
+                        
+                            
+                                <span id="/2025/02/10/Dream-car/" class="leancloud_visitors" data-flag-title="Dream car">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2025/02/10/Dream-car/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                        
+                            <span class="category-color">WebGL</span>
+                        
+                    
+                    
+                        
+                            <span class="tag-color">Three.js</span>
+                        
+                            <span class="tag-color">xiaomi su7</span>
+                        
+                    
+                </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div id="container">
+    
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h1 id="Dream-car"><a href="#Dream-car" class="headerlink" title="Dream car"></a>Dream car</h1><h3 id="xiaomi-SU7"><a href="#xiaomi-SU7" class="headerlink" title="xiaomi SU7"></a>xiaomi SU7</h3><p>一个简单的3D 汽车模型展示场景与原理；主要是模型的加载，选配材质和物理材质的设置，以及应用灯光实现的效果。</p>
+<span id="more"></span>
+
+<p><img src="https://s1.xiaomiev.com/activity-outer-assets/0328/images/su7/su7_1_20241226.jpg" alt="xiaomi SU7" title="SU7"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br></pre></td><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref, onMounted, onBeforeUnmount &#125; from <span class="string">&#x27;vue&#x27;</span>;</span><br><span class="line">import &#123; useRouter &#125; from <span class="string">&#x27;vue-router&#x27;</span></span><br><span class="line">import * as THREE from <span class="string">&#x27;three&#x27;</span></span><br><span class="line">import &#123; GUI &#125; from <span class="string">&#x27;three/examples/jsm/libs/lil-gui.module.min.js&#x27;</span></span><br><span class="line">import &#123; OrbitControls &#125; from <span class="string">&#x27;three/examples/jsm/controls/OrbitControls.js&#x27;</span></span><br><span class="line">import &#123; GLTFLoader &#125; from <span class="string">&#x27;three/examples/jsm/loaders/GLTFLoader.js&#x27;</span></span><br><span class="line">import &#123; DRACOLoader &#125; from <span class="string">&#x27;three/examples/jsm/loaders/DRACOLoader.js&#x27;</span></span><br><span class="line">import * as GeometryCompressionUtils from <span class="string">&#x27;three/addons/utils/GeometryCompressionUtils.js&#x27;</span>;</span><br><span class="line">import gsap from <span class="string">&#x27;gsap&#x27;</span></span><br><span class="line">import JSZip from <span class="string">&#x27;jszip&#x27;</span></span><br><span class="line">import JSZipUtils from <span class="string">&#x27;jszip-utils&#x27;</span></span><br><span class="line"></span><br><span class="line">const router = useRouter()</span><br><span class="line">const width = window.innerWidth, height = window.innerHeight;</span><br><span class="line">const threeContainer = ref(null);</span><br><span class="line">const guiContainer = ref(null);</span><br><span class="line"></span><br><span class="line">// 车辆外观</span><br><span class="line"><span class="built_in">let</span> wheelsCar, carBody, frontCar, hoodCar, backCar, glassCar;</span><br><span class="line">const bodyMaterial = new THREE.MeshPhysicalMaterial(&#123; </span><br><span class="line">  color: 0xff00ff, </span><br><span class="line">  roughness: 0.5, // 粗糙度</span><br><span class="line">  metalness: 1, // 金属度</span><br><span class="line">  clearcoat: 1, </span><br><span class="line">  clearcoatRoughness: 0 // 清漆</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">const wheelsCarMaterial = new THREE.MeshPhysicalMaterial(&#123;</span><br><span class="line">  color: 0x000000, </span><br><span class="line">  roughness: 0.01, // 粗糙度</span><br><span class="line">  metalness: 0.1, // 金属度</span><br><span class="line">  transmission: 1</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const glassCarMaterial = new THREE.MeshPhysicalMaterial(&#123; </span><br><span class="line">  color: 0xffffff, </span><br><span class="line">  transmission: 1,</span><br><span class="line">  roughness: 0, // 粗糙度</span><br><span class="line">  metalness: 0, // 金属度</span><br><span class="line">  transparent: <span class="literal">true</span>,</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">// 创建场景</span><br><span class="line">const scene = new THREE.Scene();</span><br><span class="line"></span><br><span class="line">// init WebGL渲染器</span><br><span class="line">const renderer = new THREE.WebGLRenderer(&#123;</span><br><span class="line">  antialias: <span class="literal">true</span>, // 抗锯齿</span><br><span class="line">&#125;);</span><br><span class="line">renderer.setSize( width, height );</span><br><span class="line"></span><br><span class="line">// 设置色调映射</span><br><span class="line">// renderer.toneMapping = THREE.ACESFilmicToneMapping;</span><br><span class="line">// renderer.toneMappingExposure = 1; // 色调映射曝光</span><br><span class="line">// renderer.outputEncoding = THREE.sRGBEncoding;</span><br><span class="line"></span><br><span class="line">// init 相机</span><br><span class="line">const camera = new THREE.PerspectiveCamera( 75, width / height, 0.1, 1000 );</span><br><span class="line">camera.position.set( 0, 2, 6 );</span><br><span class="line">camera.updateProjectionMatrix(); // 更新相机投影矩阵</span><br><span class="line"></span><br><span class="line">// init 轨道控制器</span><br><span class="line">const controls = new OrbitControls(camera, renderer.domElement)</span><br><span class="line">controls.enableDamping = <span class="literal">true</span>; // 启用阻尼（惯性）</span><br><span class="line"></span><br><span class="line">// 坐标辅助</span><br><span class="line">// const axesHelper = new THREE.AxesHelper( 5 );</span><br><span class="line">// scene.add(axesHelper);</span><br><span class="line">// init 加载器gltf</span><br><span class="line">const gltfLoader = new GLTFLoader();</span><br><span class="line">// init 加载器draco</span><br><span class="line">const dracoLoader = new DRACOLoader();</span><br><span class="line">gltfLoader.setDRACOLoader(dracoLoader)</span><br><span class="line">dracoLoader.setDecoderPath(<span class="string">&#x27;/draco/gltf/&#x27;</span>);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">gltfLoader.load(<span class="string">&#x27;/su8-pipeline.glb&#x27;</span>, (gltf) =&gt; &#123;</span><br><span class="line">  gltf.scene.traverse(<span class="keyword">function</span> (child) &#123;</span><br><span class="line">    const dreamCar = gltf.scene;</span><br><span class="line">    dreamCar.traverse( child =&gt; &#123;</span><br><span class="line">      <span class="keyword">if</span> ( child.isMesh ) &#123;</span><br><span class="line">        // console.log( child.name )</span><br><span class="line">        // <span class="keyword">if</span> ( child.name !== <span class="string">&#x27;Object_45&#x27;</span> ) &#123; // 车身</span><br><span class="line">        //   child.visible = <span class="literal">false</span>;</span><br><span class="line">        // &#125;</span><br><span class="line">      </span><br><span class="line">        // 车轮</span><br><span class="line">        // <span class="keyword">if</span> ( child.name === <span class="string">&#x27;Object_56&#x27;</span> ) &#123;</span><br><span class="line">        //   wheelsCar = child;</span><br><span class="line">        //   wheelsCar.material = wheelsCarMaterial;</span><br><span class="line">        // &#125;</span><br><span class="line"></span><br><span class="line">        // 玻璃</span><br><span class="line">        <span class="keyword">if</span> ( child.name === <span class="string">&#x27;Object_21&#x27;</span></span><br><span class="line">          || child.name === <span class="string">&#x27;Object_40&#x27;</span> </span><br><span class="line">          || child.name === <span class="string">&#x27;Object_49&#x27;</span></span><br><span class="line">          || child.name === <span class="string">&#x27;Object_36&#x27;</span>) &#123;</span><br><span class="line">          glassCar = child;</span><br><span class="line">          glassCar.material = glassCarMaterial;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // 车身</span><br><span class="line">        <span class="keyword">if</span> ( child.name === <span class="string">&#x27;Object_18&#x27;</span></span><br><span class="line">          || child.name === <span class="string">&#x27;Object_32&#x27;</span> </span><br><span class="line">          || child.name === <span class="string">&#x27;Object_39&#x27;</span></span><br><span class="line">          || child.name === <span class="string">&#x27;Object_31&#x27;</span></span><br><span class="line">          || child.name === <span class="string">&#x27;Object_52&#x27;</span></span><br><span class="line">          || child.name === <span class="string">&#x27;Object_45&#x27;</span></span><br><span class="line">        ) &#123;</span><br><span class="line">          carBody = child;</span><br><span class="line">          carBody.material = bodyMaterial;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        // Object_21:前后档玻璃 Object_45: 主驾门 Object_36：主驾车窗玻璃 Object_39：主驾后门 Object_40：主驾后门玻璃</span><br><span class="line">        // Object_32: 副驾门 Object_49：副驾门玻璃 Object_52：副驾后门 Object_53：副驾后门玻璃 Object_52：后挡风玻璃</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> ( child.name === <span class="string">&#x27;Object_56&#x27;</span> ) &#123;</span><br><span class="line">          wheelsCar = child;</span><br><span class="line">        &#125;</span><br><span class="line">        // <span class="keyword">if</span> ( child.name === <span class="string">&#x27;Object_19&#x27;</span> ) &#123;</span><br><span class="line">        //   frontCar = child;</span><br><span class="line">        // &#125;</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    scene.add(dreamCar);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br><span class="line">// const zipFile = await fetch(<span class="string">&#x27;/su7.zip&#x27;</span>).<span class="keyword">then</span>(response =&gt; response.arrayBuffer()); // 获取zip文件的二进制数据</span><br><span class="line">// const new_zip = new JSZip(); // 实例化jszip</span><br><span class="line">// JSZipUtils.getBinaryContent(<span class="string">&quot;/su7.zip&quot;</span>, <span class="keyword">function</span> (err, data) &#123;</span><br><span class="line">//     <span class="keyword">if</span> (err) &#123;</span><br><span class="line">//       throw err; // or handle err</span><br><span class="line">//     &#125;</span><br><span class="line"></span><br><span class="line">//     new_zip.loadAsync(data).<span class="keyword">then</span>(<span class="keyword">function</span> (res) &#123; </span><br><span class="line">//       <span class="built_in">let</span> fileList = res.files;</span><br><span class="line">//       <span class="keyword">for</span> (<span class="built_in">let</span> key <span class="keyword">in</span> fileList) &#123;</span><br><span class="line">//         console.log(key)</span><br><span class="line">//         new_zip</span><br><span class="line">//         .file(key)</span><br><span class="line">//         .async(<span class="string">&quot;arraybuffer&quot;</span>)</span><br><span class="line">//         .<span class="keyword">then</span>((content) =&gt; &#123;</span><br><span class="line">//           // Blob构造文件地址，通过url加载模型</span><br><span class="line">//           let blob = new Blob([content]);</span><br><span class="line">//           let modelUrl = URL.createObjectURL(blob);</span><br><span class="line">//           console.log(modelUrl);</span><br><span class="line">//           gltfLoader.load(modelUrl, (gltf) =&gt; &#123;</span><br><span class="line">//             gltf.scene.traverse(function (child) &#123;</span><br><span class="line">//               const dreamCar = gltf.scene;</span><br><span class="line">//               dreamCar.traverse( child =&gt; &#123;</span><br><span class="line">//                 if ( child.isMesh ) &#123;</span><br><span class="line">//                   console.log( child.name )</span><br><span class="line">//                   // if ( child.name !== &#x27;Object_45&#x27; ) &#123; // 车身</span><br><span class="line">//                   //   child.visible = false;</span><br><span class="line">//                   // &#125;</span><br><span class="line">                </span><br><span class="line">//                   // 车轮</span><br><span class="line">//                   if ( child.name === &#x27;Object_56&#x27; ) &#123;</span><br><span class="line">//                     wheelsCar = child;</span><br><span class="line">//                     wheelsCar.material = wheelsCarMaterial;</span><br><span class="line">//                   &#125;</span><br><span class="line"></span><br><span class="line">//                   // 玻璃</span><br><span class="line">//                   if ( child.name === &#x27;Object_21&#x27;</span><br><span class="line">//                     || child.name === &#x27;Object_40&#x27; </span><br><span class="line">//                     || child.name === &#x27;Object_49&#x27;</span><br><span class="line">//                     || child.name === &#x27;Object_36&#x27;) &#123;</span><br><span class="line">//                     glassCar = child;</span><br><span class="line">//                     glassCar.material = glassCarMaterial;</span><br><span class="line">//                   &#125;</span><br><span class="line"></span><br><span class="line">//                   // 车身</span><br><span class="line">//                   if ( child.name === &#x27;Object_18&#x27;</span><br><span class="line">//                     || child.name === &#x27;Object_32&#x27; </span><br><span class="line">//                     || child.name === &#x27;Object_39&#x27;</span><br><span class="line">//                     || child.name === &#x27;Object_31&#x27;</span><br><span class="line">//                     || child.name === &#x27;Object_52&#x27;</span><br><span class="line">//                     || child.name === &#x27;Object_45&#x27;</span><br><span class="line">//                   ) &#123;</span><br><span class="line">//                     carBody = child;</span><br><span class="line">//                     carBody.material = bodyMaterial;</span><br><span class="line">//                   &#125;</span><br><span class="line"></span><br><span class="line">//                   // Object_21:前后档玻璃 Object_45: 主驾门 Object_36：主驾车窗玻璃 Object_39：主驾后门 Object_40：主驾后门玻璃</span><br><span class="line">//                   // Object_32: 副驾门 Object_49：副驾门玻璃 Object_52：副驾后门 Object_53：副驾后门玻璃 Object_52：后挡风玻璃</span><br><span class="line">                  </span><br><span class="line">//                   if ( child.name === &#x27;Object_56&#x27; ) &#123;</span><br><span class="line">//                     wheelsCar = child;</span><br><span class="line">//                   &#125;</span><br><span class="line">//                   // if ( child.name === &#x27;Object_19&#x27; ) &#123;</span><br><span class="line">//                   //   frontCar = child;</span><br><span class="line">//                   // &#125;</span><br><span class="line">//                 &#125;</span><br><span class="line">//               &#125;)</span><br><span class="line">//               scene.add(dreamCar);</span><br><span class="line">//             &#125;);</span><br><span class="line">//           &#125;);</span><br><span class="line">//         &#125;);</span><br><span class="line">//       &#125;</span><br><span class="line">//     &#125;)</span><br><span class="line">//   &#125;)</span><br><span class="line"></span><br><span class="line">// 添加光源 前、后、左、右、顶</span><br><span class="line">const light1 = new THREE.DirectionalLight( <span class="number">0</span>xffffff, <span class="number">1</span> );</span><br><span class="line">light1.position.set( <span class="number">0</span>, <span class="number">0</span>, <span class="number">10</span> );</span><br><span class="line">scene.add( light1 );</span><br><span class="line">const light2 = new THREE.DirectionalLight( <span class="number">0</span>xffffff, <span class="number">1</span> );</span><br><span class="line">light2.position.set( <span class="number">0</span>, <span class="number">0</span>, -<span class="number">10</span> );</span><br><span class="line">scene.add( light2 );</span><br><span class="line">const light3 = new THREE.DirectionalLight( <span class="number">0</span>xffffff, <span class="number">1</span> );</span><br><span class="line">light3.position.set( <span class="number">0</span>, <span class="number">10</span>, <span class="number">0</span> );</span><br><span class="line">scene.add( light3 );</span><br><span class="line">const light4 = new THREE.DirectionalLight( <span class="number">0</span>xffffff, <span class="number">1</span> );</span><br><span class="line">light4.position.set( <span class="number">10</span>, <span class="number">0</span>, <span class="number">0</span> );</span><br><span class="line">scene.add( light4 );</span><br><span class="line">const light5 = new THREE.DirectionalLight( <span class="number">0</span>xffffff, <span class="number">1</span> );</span><br><span class="line">light5.position.set( -<span class="number">10</span>, <span class="number">0</span>, <span class="number">0</span> );</span><br><span class="line">scene.add( light5 );</span><br><span class="line">const light6 = new THREE.DirectionalLight( <span class="number">0</span>xffffff, <span class="number">1</span> );</span><br><span class="line">light6.position.set( <span class="number">10</span>, <span class="number">5</span>, <span class="number">0</span> );</span><br><span class="line">scene.add( light6 );</span><br><span class="line"></span><br><span class="line">const render = () =&gt; &#123;</span><br><span class="line">  controls.update();</span><br><span class="line">  renderer.render( scene, camera );</span><br><span class="line">  requestAnimationFrame( render );</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">renderer.setClearColor(&#x27;#<span class="number">000</span>&#x27;);</span><br><span class="line">scene.background = new THREE.Color(&#x27;#ccc&#x27;);</span><br><span class="line">scene.environment = new THREE.Color(&#x27;#ccc&#x27;);</span><br><span class="line"></span><br><span class="line">// 添加网格地面</span><br><span class="line">const gridHelper = new THREE.GridHelper( <span class="number">10</span>, <span class="number">10</span> );</span><br><span class="line">gridHelper.material.opacity = <span class="number">0.5</span>;</span><br><span class="line">gridHelper.material.transparent = true;</span><br><span class="line">scene.add( gridHelper );</span><br><span class="line"></span><br><span class="line">onMounted(() =&gt; &#123;</span><br><span class="line">  render();</span><br><span class="line">  document.body.appendChild( renderer.domElement ); // 将渲染器添加到DOM中</span><br><span class="line">  // init renderer`s backgroundColor</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">onBeforeUnmount(() =&gt; &#123;</span><br><span class="line">  memoryClean();</span><br><span class="line">  // gui.destroy(); // 销毁GUI实例</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const memoryClean = () =&gt;&#123;</span><br><span class="line">    const meshes = [];</span><br><span class="line">    scene.traverse(function (object) &#123;</span><br><span class="line">        object.isMesh &amp;&amp; meshes.push(object);</span><br><span class="line">    &#125;);</span><br><span class="line">    for (let i = <span class="number">0</span>; i &lt; meshes.length; i++) &#123;</span><br><span class="line">        const mesh = meshes[i];</span><br><span class="line">        mesh.material.dispose();</span><br><span class="line">        mesh.geometry.dispose();</span><br><span class="line">        scene.remove(mesh);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const back = () =&gt; &#123;</span><br><span class="line">  router.go(-<span class="number">1</span>)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;btn-group&quot;&gt;</span><br><span class="line">    &lt;button class=&quot;back-btn&quot;  @click=&quot;back&quot;&gt;返回&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">  </span><br><span class="line">  &lt;div ref=&quot;threeContainer&quot; class=&quot;threeContainer&quot;&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div ref=&quot;guiContainer&quot;&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="效果图："><a href="#效果图：" class="headerlink" title="效果图："></a>效果图：</h3><p><img src="/image/website/xiaomiSU7.png" alt="xiaomi SU7"></p>
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.png" alt="iLonge">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>iLonge
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/2025/02/10/Dream-car/" target="_blank">Dream car</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>爱生活，iLonge。
+        <br>
+        <!-- <span class="suffix-box-title">关于主题：</span><a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+        <br> -->
+        <span class="suffix-box-title">版权声明：</span>创作不易，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                    <div class="category">
+                        分类：
+                        
+                            <a href="/category/WebGL/">WebGL</a>
+                        
+                    </div>
+                
+                
+                    <div class="tag">
+                        标签：
+                        
+                            <a href="/tag/Three-js/">Three.js</a>
+                        
+                            <a href="/tag/xiaomi-su7/">xiaomi su7</a>
+                        
+                    </div>
+                
+                <div class="article-prev-next">
+                    
+                        <a href="/2025/02/13/PonitLight/" class="prev-prefix">« </a> 上一篇：    <a href="/2025/02/13/PonitLight/" title="发布于 2025-02-13 10:54">PonitLight</a>
+                        <br>
+                    
+                    
+                        <a href="/2025/02/10/Hexo/" class="next-prefix">» </a> 下一篇：    <a href="/2025/02/10/Hexo/" title="发布于 2025-02-10 03:50">Hexo</a>
+                    
+                </div>
+            </div>
+            
+    <div class="article-comments">
+        
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
+    
+</div>
+    <div id="footer">
+    <div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>用微笑😊面对生活，<span></span>生活也会对你报以微笑<span style='color: red;'>❤</span></div><div>&copy; 2025 WorstOne. All Rights Reserved.</div>
+</div>
+    <div id="sidebar">
+    <div class="menu-wrap" style="display:none;">
+        
+            <div class="menu-notice">
+                <span class="iconfont icon-notice"></span>
+                <div class="notice">
+                    <span>欢迎来到我的博客，很高兴见到你！</span>
+                </div>
+            </div>
+        
+        <nav class="menu">
+            <div class="menu-introduce"> 
+                <div class="introduce-avatar">
+                    <img src="/image/sidebar/avatar.png">
+                </div> 
+                <div class="introduce-info"> 
+                    <div class="introduce-user">
+                        
+                            <a href="https://ilonge.cn" target="_blank"><span>iLonge</span></a>
+                        
+                    </div>
+                </div> 
+            </div> 
+            <div class="menu-list">
+                <ul>
+                    
+                        <li class=""><a href="/" class="" target="_self"><span class="iconfont icon-home-fill"></span>首页</a></li>
+                    
+                        <li class=""><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
+                    
+                        <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
+                    
+                        <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
+                    
+                        <li class=""><a href="/donate" class="" target="_self"><span class="iconfont icon-heart-fill"></span>赞赏</a></li>
+                    
+                        <li class=""><a href="/about" class="" target="_self"><span class="iconfont icon-about-fill"></span>关于</a></li>
+                    
+                        <li class=""><a href="/atom.xml" class="" target="_blank"><span class="iconfont icon-rss"></span>订阅</a></li>
+                    
+                        <li class=""><a href="javascript:;" class="search" target="_self"><span class="iconfont icon-search-menu"></span>搜索</a></li>
+                    
+                        <li class=""><a href="/comment" class="" target="_self"><span class="iconfont icon-comments-fill"></span>留言板</a></li>
+                    
+                        <li class=""><a href="/friend" class="" target="_self"><span class="iconfont icon-link"></span>友情链接</a></li>
+                    
+                </ul> 
+            </div> 
+            <div class="menu-link">
+                <div class="box">
+                    <div class="image-box"></div>
+                </div>
+                
+                    <a name="知乎" href="https://zhihu.com/people/longe-40" class="" target="_blank" data=""><span class="iconfont icon-zhihu"></span></a>
+                
+                    <a name="微博" href="https://weibo.com/u/1786198674" class="" target="_blank" data=""><span class="iconfont icon-weibo"></span></a>
+                
+                    <a name="QQ" href="javascript:;" class="image" target="_self" data="/image/sidebar/qq.png"><span class="iconfont icon-qq"></span></a>
+                
+                    <a name="微信" href="javascript:;" class="image" target="_self" data="/image/sidebar/wechat.png"><span class="iconfont icon-wechat"></span></a>
+                
+                    <a name="GitHub" href="https://github.com/wl524035394" class="" target="_blank" data=""><span class="iconfont icon-github"></span></a>
+                
+            </div> 
+        </nav>
+        <button class="menu-button-close"></button>
+        <div class="morph-shape" id="morph-shape" data-morph-open="M-7.312,0H15c0,0,66,113.339,66,399.5C81,664.006,15,800,15,800H-7.312V0z;M-7.312,0H100c0,0,0,113.839,0,400c0,264.506,0,400,0,400H-7.312V0z">
+            <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+                <path d="M-7.312,0H0c0,0,0,113.839,0,400c0,264.506,0,400,0,400h-7.312V0z"/>
+            </svg>
+        </div>
+    </div>
+    <button class="menu-button-open">Menu</button>
+    <div class="menu-cover"></div>
+</div>
+    <link type="text/css" rel="stylesheet" href="/css/search.css">
+<script type="text/javascript" src="/js/iscroll.js"></script>
+<script type="text/javascript" src="/js/instantsearch.min.js"></script>
+<div class="search-window">
+    <div class="search-content">
+        <div class="search-content-icon">
+            <i class="iconfont icon-search"></i>
+        </div>
+        <div id="search-input" class="search-input"></div>
+    </div>
+
+    <div class="search-scroll">
+        <div class="search-result">
+            <div id="search-stats" class="search-stats"></div>
+            <div id="search-hits"></div>
+            <div id="search-pagination" class="search-pagination"></div>
+        </div>
+    </div>
+
+    <span class="search-close-icon">
+        <i class="iconfont icon-close"></i>
+    </span>
+</div>
+    <div id="tools">
+    <div class="progressbar-top"></div>
+    
+    <link type="text/css" rel="stylesheet" href="/css/APlayer.css">
+    <script type="text/javascript" src="/js/APlayer.min.js"></script>
+    <script type="text/javascript" src="/js/Meting.min.js"></script>
+    <script>
+        var meting_api = 'https://api.i-meto.com/meting/api?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+    </script>
+    <meting-js id="3778678" lrcshow="false" server="netease" type="playlist" fixed="true" autoplay="false" loop="all" order="random" preload="auto" volume="0.67" mutex="true"></meting-js>
+
+    <div class="wrap-right">
+    <div class="wrap-right-hide">
+         <div class="wrap-right-button favorites">
+            <div class="iconbox" switch="false">
+                <span class="iconfont icon-favorites"></span>
+            </div>
+            <span class="icontext">关注</span>
+         </div>
+        <div class="wrap-right-button search">
+            <div class="iconbox">
+                <span class="iconfont icon-search-menu"></span>
+            </div>
+            <span class="icontext">搜索</span>
+        </div>
+        <div class="wrap-right-button menu-button">
+            <div class="iconbox">
+                <span class="iconfont icon-menu"></span>
+            </div>
+            <span class="icontext">菜单</span>
+        </div>
+        <div class="wrap-right-button mode">
+            <div class="light">
+                <div class="iconbox">
+                    <span class="iconfont icon-daymode"></span>
+                </div>
+                <span class="icontext">浅色模式</span>
+            </div>
+            <div class="dark">
+                <div class="iconbox">
+                    <span class="iconfont icon-nightmode-fill"></span>
+                </div>
+                <span class="icontext">深色模式</span>
+            </div>
+        </div>
+        <div class="wrap-right-button bottom">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">跳至底部</span>
+        </div>
+    </div>
+    <div class="wrap-right-show">
+        <div class="wrap-right-button set">
+            <div class="iconbox">
+                <span class="iconfont icon-setting"></span>
+            </div>
+            <span class="icontext">设置</span>
+        </div>
+        <div class="wrap-right-button top">
+            <div class="iconbox">
+                <span class="iconfont icon-top"></span>
+            </div>
+            <span class="icontext">返回顶部</span>
+        </div>
+    </div>
+</div>
+    <div class="loading"></div>
+</div>
+    <script>
+    window.config = {
+        GitHubUserName     : "wl524035394",
+        GitHubRepositories : "wl524035394.github.io",
+
+        User             : "iLonge",
+        UserAvatar       : "/image/sidebar/avatar.png",
+        WebsiteStartDate : "2025-02-09",
+        Home             : "https://ilonge.cn",
+
+        WebsiteTitleBlur         : "(◍´꒳`◍) Hi, I`m ilonge！",
+        WebsiteTitleBlurTimeOut  : 500,
+        WebsiteTitleFocus        : "(*´∇｀*) 欢迎回来!",
+        WebsiteTitleFocusTimeOut : 800,
+        WebsiteFavicon           : {
+            light : "/image/website/logo/logo.png",
+            dark  : "/image/website/logo/logo-dark.png"
+        },
+
+        ProgressBar : {
+            id       : "topProgressBar",
+            color    : "#77B6FF",
+            height   : "2px",
+            duration : 0.2
+        },
+
+        Loading: {
+            rebound : {
+                tension  : 16,
+                friction : 5
+            },
+            spinner : {
+                id     : "spinner",
+                radius : 90,
+                sides  : 3,
+                depth  : 4,
+                colors : {
+                    background : "#F0F0F0",
+                    stroke     : "#272633",
+                    base       : "",
+                    child      : "#272633"
+                },
+                alwaysForward : true,
+                restAt        : 0.5,
+                renderBase    : false
+            }
+        },
+
+        HomeHeaderAnimationRendered : true,
+        HomeHeaderAnimation         : {
+            radius      : 15,
+            density     : 0.2,
+            color       : "rgba(255, 255, 255, .2)",
+            clearOffset : 0.3
+        },
+
+        BackAnimationRendered          : true,
+        IEBrowserBackAnimationRendered : false,
+        BackAnimation                  : {
+            colorSaturation  : "60%",
+            colorBrightness  : "50%",
+            colorAlpha       : 0.5,
+            colorCycleSpeed  : 5,
+            verticalPosition : "random",
+            horizontalSpeed  : 200,
+            ribbonCount      : 3,
+            strokeSize       : 0,
+            parallaxAmount   : -0.2,
+            animateSections  : true
+        },
+
+        HomeHeaderImage : [
+            
+                "/image/header/home.jpg",
+            
+                "/image/header/home.jpeg",
+            
+                "/image/header/future.jpg",
+            
+                "/image/header/sea.jpg",
+            
+        ],
+        HomeBannerText  : "",
+
+        ArticleHeaderImage : [
+            
+                "/image/header/article.jpg",
+            
+        ],
+
+        OtherBannerText : "",
+
+        Error : {
+            icon    : "icon-swimming",
+            title   : "PAGE NOT FOUND",
+            content : [
+                
+                    "很抱歉，您访问的页面不存在！",
+                
+                    "可能是输入地址有误或该地址已变更。",
+                
+            ],
+            buttons : [
+                
+                    {
+                        icon  : "icon-home",
+                        text  : "返回首页",
+                        href  : "/",
+                        class : ""
+                    },
+                
+            ]
+        },
+
+        MenuNotice : {
+            enable : true,
+            notice : "欢迎来到我的博客，很高兴见到你！",
+            speed  : 20
+        },
+        MenuList : [
+            
+                {
+                    name   : "首页",
+                    icon   : "icon-home-fill",
+                    href   : "/",
+                    type   : "index",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "分类",
+                    icon   : "icon-folder-fill",
+                    href   : "/category",
+                    type   : "category",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "标签",
+                    icon   : "icon-discount-fill",
+                    href   : "/tag",
+                    type   : "tag",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "归档",
+                    icon   : "icon-calendar-fill",
+                    href   : "/archive",
+                    type   : "archive",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "赞赏",
+                    icon   : "icon-heart-fill",
+                    href   : "/donate",
+                    type   : "donate",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "关于",
+                    icon   : "icon-about-fill",
+                    href   : "/about",
+                    type   : "about",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "订阅",
+                    icon   : "icon-rss",
+                    href   : "/atom.xml",
+                    type   : "",
+                    class  : "",
+                    target : "_blank"
+                },
+            
+                {
+                    name   : "搜索",
+                    icon   : "icon-search-menu",
+                    href   : "javascript:;",
+                    type   : "",
+                    class  : "search",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "留言板",
+                    icon   : "icon-comments-fill",
+                    href   : "/comment",
+                    type   : "comment",
+                    class  : "",
+                    target : "_self"
+                },
+            
+                {
+                    name   : "友情链接",
+                    icon   : "icon-link",
+                    href   : "/friend",
+                    type   : "friend",
+                    class  : "",
+                    target : "_self"
+                },
+            
+        ],
+        MenuLink : [
+            
+                
+                    {
+                        name   : "知乎",
+                        icon   : "icon-zhihu",
+                        href   : "https://zhihu.com/people/longe-40",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "微博",
+                        icon   : "icon-weibo",
+                        href   : "https://weibo.com/u/1786198674",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+                    {
+                        name   : "QQ",
+                        icon   : "icon-qq",
+                        href   : "javascript:;",
+                        class  : "image",
+                        target : "_self",
+                        image  : "/image/sidebar/qq.png"
+                    },
+                
+                    {
+                        name   : "微信",
+                        icon   : "icon-wechat",
+                        href   : "javascript:;",
+                        class  : "image",
+                        target : "_self",
+                        image  : "/image/sidebar/wechat.png"
+                    },
+                
+                    {
+                        name   : "GitHub",
+                        icon   : "icon-github",
+                        href   : "https://github.com/wl524035394",
+                        class  : "",
+                        target : "_blank",
+                        image  : ""
+                    },
+                
+            
+        ],
+
+        FooterStyle : 2,
+        BottomText  : "<div><span class='face'>ღゝ◡╹)ノ♡</span></div><div>用微笑😊面对生活，<span></span>生活也会对你报以微笑<span style='color: red;'>❤</span></div><div>&copy; 2025 WorstOne. All Rights Reserved.</div>",
+
+        ConsoleList : [
+            
+                
+                    [
+                        
+                            
+                                "Based on cnblogs theme SimpleMemory.",
+                            
+                                "",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "SimpleMemory Author:",
+                            
+                                "BNDong",
+                            
+                        
+                    ],
+                
+                    [
+                        
+                            
+                                "Theme:",
+                            
+                                "LiveForCode",
+                            
+                        
+                    ],
+                
+            
+        ],
+
+        FontIconExtend : "",
+
+        Donate : {
+            paypal  : "",
+            bitcoin : "",
+            alipay  : "/image/donate/alipay.png",
+            wechat  : "/image/donate/wechat.png"
+        },
+
+        Search : {
+            applicationID : "I1U3YQXUQG",
+            apiKey        : "fe7d8f2554f7742fa407b8e34b61b948",
+            indexName     : "blog",
+            hits          : {
+                page : 10
+            },
+            labels        : {
+                placeholder : "搜索",
+                empty       : "未发现与 「${query}」 相关的内容",
+                stats       : "${hits} 条相关条目，使用了 ${time} 毫秒",
+            }
+        }, 
+
+        Comment : {
+            switch : true,
+            type   : "Valine",
+        },
+
+        Waline : {
+            el              : ".comments-content",
+            serverURL       : "",
+            path            : window.location.pathname,
+            meta            : "['nick', 'mail', 'link']",
+            requiredMeta    : "['nick', 'mail']",
+            pageSize        : 10,
+            lang            : "zh-cn",
+            locale: {
+                admin       : "博主",
+                anonymous   : "匿名用户",
+                sofa        : "快来做第一个评论的人吧 ~",
+                placeholder : "你是我一生只会遇见一次的惊喜...",
+            },
+            dark            : "html[color-scheme='dark']",
+            search          : false,
+            pageview        : true,
+            comment         : true,
+            copyright       : false,
+        },
+
+        Valine : {
+            el             : ".comments-content",
+            appId          : "aSDXzLSlip0GMsEfyZt3HX00-gzGzoHsz",
+            appKey         : "whnXfnjcoKbQyq2WdSJzrXFZ",
+            serverURLs     : "",
+            placeholder    : "你是我一生只会遇见一次的惊喜...",
+            avatar         : "monsterid",
+            meta           : "nick,mail,link",
+            requiredFields : "nick,mail",
+            pageSize       : 5,
+            lang           : "zh-CN",
+            visitor        : true,
+            enableQQ       : true
+        },
+
+        Tocbot : {
+            switch                : true,
+            tocSelector           : ".toc",
+            contentSelector       : ".article-body",
+            headingSelector       : "h1, h2, h3, h4, h5",
+            headingsOffset        : 0,
+            scrollSmooth          : true,
+            scrollSmoothOffset    : -5,
+            positionFixedSelector : ".toc",
+            positionFixedClass    : "toc-fixed",
+            fixedSidebarOffset    : "",
+        },
+
+        Require : {
+            baseUrl     : "/js/",
+            waitSeconds : 100
+        },
+
+        Music : {
+            type : "Meting"
+        },
+        APlayer : {
+            container : ".aplayer",
+            fixed     : true,
+            autoplay  : false,
+            loop      : "all",
+            order     : "random",
+            preload   : "auto",
+            volume    : 0.67,
+            mutex     : true,
+            lrcType   : 3,
+            audio     : [
+                
+                    {
+                        name   : "Endless Tears",
+                        artist : "CLIFF EDGE",
+                        cover  : "/music/cover/Endless Tears.jpg",
+                        url    : "/music/song/Endless Tears.mp3",
+                        lrc    : "/music/lrc/Endless Tears.lrc"
+                    },
+                
+            ]
+        },
+        Meting : {
+            api      : "https://api.i-meto.com/meting/api",
+            id       : "3778678", 
+            lrcshow  : false, 
+            server   : "netease", 
+            type     : "playlist", 
+            fixed    : true, 
+            autoplay : false, 
+            loop     : "all", 
+            order    : "random", 
+            preload  : "auto", 
+            volume   : 0.67, 
+            mutex    : true
+        },
+
+        Mouse : {
+            enable  : true,
+            options : {
+                size  : 6,
+                sizeF : 24
+            }
+        },
+
+        LazyLoad : {
+            default : "/image/website/lazyload.svg"
+        },
+  
+        Style : {
+            aplayer          : "/css/APlayer.css",
+            archive          : "/css/archive.css",
+            base             : "/css/base.css",
+            clipboard        : "/css/clipboard.css",
+            code             : "/css/code.css",
+            donate           : "/css/donate.css",
+            fancybox         : "/css/jquery.fancybox.css",
+            footer           : "/css/footer.css",
+            iconfont         : "/iconfont/iconfont.css",
+            index            : "/css/index.css",
+            menuBubble       : "/css/menu-bubble.css",
+            mouse            : "/css/mouse.css",
+            page             : "/css/page.css",
+            post             : "/css/post.css",
+            search           : "/css/search.css",
+            tocbot           : "/css/tocbot.css",
+            valine           : "/css/valine.css",
+            waline           : "/css/waline.css",
+            walineCustom     : "/css/waline-custom.css"
+        },
+
+        Script: {
+            aplayer          : "/js/APlayer.min.js",
+            config           : "/js/require.config.js",
+            index            : "/js/index.js",
+            instantSearch    : "/js/instantsearch.min.js",
+            iscroll          : "/js/iscroll.js",
+            jQuery           : "/js/jquery-3.4.1.min.js",
+            loading          : "/js/loading.js",
+            meting           : "/js/Meting.min.js",
+            require          : "/js/require.min.js",
+            waline           : "/js/waline.mjs",
+            pageview         : "/js/pageview.mjs",
+            comment          : "/js/comment.mjs",
+        },
+
+        Font: {
+            LongCang    : "/font/LongCang.css",
+            Monda       : "/font/Monda.css",
+            NotoSansSC  : "/font/NotoSansSC.css",
+            NotoSerifSC : "/font/NotoSerifSC.css",
+            Playball    : "/font/Playball.css",
+            PTMono      : "/font/PTMono.css",
+            Roboto      : "/font/Roboto.css",
+            RobotoSlab  : "/font/RobotoSlab.css",
+            Rosario     : "/font/Rosario.css",
+            UbuntuMono  : "/font/UbuntuMono.css"
+        },
+
+        Suffix : {
+            about : "爱生活，iLonge。"
+        },
+            
+        Theme : {
+            url  : "https://github.com/first19326/Hexo-LiveForCode",
+            name : "Hexo - Live For Code"
+        }  
+    };
+</script>
+    <script type="text/javascript" src="/js/index.js"></script>
+</body>
+</html>
