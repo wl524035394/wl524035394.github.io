@@ -93,9 +93,9 @@
     <category term="工具" scheme="http://example.com/category/%E5%B7%A5%E5%85%B7/"/>
     
     
-    <category term="Fiddler" scheme="http://example.com/tag/Fiddler/"/>
-    
     <category term="文档" scheme="http://example.com/tag/%E6%96%87%E6%A1%A3/"/>
+    
+    <category term="Fiddler" scheme="http://example.com/tag/Fiddler/"/>
     
   </entry>
   
