@@ -9,7 +9,7 @@
     <meta http-equiv="Cache-Control" content="no-siteapp">
     <title>
         
-            标签
+            Typescript 指北
         
     </title>
     <link rel="shortcut icon" href="#"/>
@@ -33,15 +33,44 @@
 </head>
 <body>
     <a id="cover"></a>
-    <link type="text/css" rel="stylesheet" href="/css/page.css">
+    <link type="text/css" rel="stylesheet" href="/css/post.css">
 <div id="header" class="header">
     <div class="vertical">
         <div class="inner">
             
-                <h1 class="header-subtitle">标签</h1>
+                <h1 class="header-subtitle">Typescript 指北</h1>
                 <div class="header-subinfo">
-                    <p class="article-info-text Chinese"></p>
-                    <p class="article-info-text English"></p>                  
+                    <p class="article-info-text">
+                        <span>
+                            <i class="iconfont icon-time"></i> 发表时间：2025-09-13
+                        </span>
+                        
+                            
+                                <span id="/2025/09/13/Typescript/" class="leancloud_visitors" data-flag-title="Typescript 指北">
+                                    <i class="iconfont icon-browse"></i> 阅读：<sapn class="leancloud-visitors-count"></span>
+                                </span>
+                            
+                            
+                                <span>
+                                    <i class="iconfont icon-interactive"></i> 评论：<span class="valine-comment-count" data-xid="/2025/09/13/Typescript/"></span>
+                                </span>
+                              
+                        
+                    </p>
+                    
+                        
+                            <span class="category-color">Typescript</span>
+                        
+                    
+                    
+                        
+                            <span class="tag-color">文档</span>
+                        
+                            <span class="tag-color">Typescript</span>
+                        
+                            <span class="tag-color">学习笔记</span>
+                        
+                    
                 </div>
             
         </div>
@@ -50,22 +79,95 @@
 </div>
 <div id="container">
     
-        <!-- 独立页面 -->
-        
-            <div class="tags">
-                <div class="tags-title">
-                    目前共计 10 个标签
-                </div>
-                <div class="tags-content">
-                    <div class="tags-light">
-                        <a href="/tag/Fiddler/" style="font-size: 12px; color: #ccc">Fiddler</a> <a href="/tag/Git/" style="font-size: 12px; color: #ccc">Git</a> <a href="/tag/Three-js/" style="font-size: 18.5px; color: #6f6f6f">Three.js</a> <a href="/tag/Typescript/" style="font-size: 12px; color: #ccc">Typescript</a> <a href="/tag/pointLight/" style="font-size: 12px; color: #ccc">pointLight</a> <a href="/tag/xiaomi-su7/" style="font-size: 12px; color: #ccc">xiaomi su7</a> <a href="/tag/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 12px; color: #ccc">学习笔记</a> <a href="/tag/%E6%96%87%E6%A1%A3/" style="font-size: 25px; color: #111">文档</a> <a href="/tag/%E6%96%BD%E5%B7%A5%E6%96%B9%E6%A1%88/" style="font-size: 12px; color: #ccc">施工方案</a> <a href="/tag/%E7%94%9F%E6%B4%BB-%E6%B8%B8%E5%B1%B1%E7%8E%A9%E6%B0%B4/" style="font-size: 12px; color: #ccc">生活-游山玩水</a>
+        <!-- 文章页面 -->
+        <div id="article">
+            <div class="toc"></div>
+            <div class="article-body">
+                <h1 id="Typescript-指北"><a href="#Typescript-指北" class="headerlink" title="Typescript 指北"></a>Typescript 指北</h1><h2 id="官方文档"><a href="#官方文档" class="headerlink" title="官方文档"></a>官方文档</h2><p><a target="_blank" rel="noopener" href="https://www.tslang.cn/docs/handbook/basic-types.html">https://www.tslang.cn/docs/handbook/basic-types.html</a></p>
+<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g typescript</span><br></pre></td></tr></table></figure>
+<h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc xxx.ts</span><br></pre></td></tr></table></figure>
+<h4 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tsc -v</span><br></pre></td></tr></table></figure>
+
+<h2 id="基础类型"><a href="#基础类型" class="headerlink" title="基础类型"></a>基础类型</h2><h4 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> isDone: boolean = <span class="literal">false</span>;</span><br></pre></td></tr></table></figure>
+<h4 id="数字"><a href="#数字" class="headerlink" title="数字"></a>数字</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> decLiteral: number = 6;</span><br><span class="line"><span class="built_in">let</span> hexLiteral: number = 0xf00d;</span><br><span class="line"><span class="built_in">let</span> binaryLiteral: number = 0b1010;</span><br><span class="line"><span class="built_in">let</span> octalLiteral: number = 0o744;</span><br></pre></td></tr></table></figure>
+<h4 id="模板字符串"><a href="#模板字符串" class="headerlink" title="模板字符串"></a>模板字符串</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> name: string = <span class="string">&quot;bob&quot;</span>;</span><br><span class="line"><span class="built_in">let</span> age: number = 37;</span><br><span class="line"><span class="built_in">let</span> sentence: string = `Hello, my name is <span class="variable">$&#123; name &#125;</span>.</span><br><span class="line">I<span class="string">&#x27;ll be $&#123; age + 1 &#125; years old next month.`;</span></span><br></pre></td></tr></table></figure>
+<h4 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> list: number[] = [1, 2, 3];</span><br><span class="line"><span class="built_in">let</span> list: Array&lt;number&gt; = [1, 2, 3];</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h4 id="元组-Tuple"><a href="#元组-Tuple" class="headerlink" title="元组 Tuple"></a>元组 Tuple</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> x: [string, number];</span><br><span class="line">x = [<span class="string">&quot;hello&quot;</span>, 10]; // OK</span><br><span class="line">x = [10, <span class="string">&quot;hello&quot;</span>]; // Error</span><br></pre></td></tr></table></figure>
+<h4 id="枚举"><a href="#枚举" class="headerlink" title="枚举"></a>枚举</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">enum Color &#123;Red, Green, Blue&#125;</span><br><span class="line"><span class="built_in">let</span> c: Color = Color.Green;</span><br></pre></td></tr></table></figure>
+<h4 id="Any"><a href="#Any" class="headerlink" title="Any"></a>Any</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> notSure: any = 4;</span><br><span class="line">notSure = <span class="string">&quot;maybe a string instead&quot;</span>;</span><br><span class="line">notSure = <span class="literal">false</span>; // okay, definitely a boolean</span><br></pre></td></tr></table></figure>
+<h4 id="Void"><a href="#Void" class="headerlink" title="Void"></a>Void</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> warnUser(): void &#123;</span><br><span class="line">    console.log(<span class="string">&quot;This is my warning message&quot;</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="Null-和-Undefined"><a href="#Null-和-Undefined" class="headerlink" title="Null 和 Undefined"></a>Null 和 Undefined</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> u: undefined = undefined;</span><br><span class="line"><span class="built_in">let</span> n: null = null;</span><br></pre></td></tr></table></figure>
+<h4 id="Never"><a href="#Never" class="headerlink" title="Never"></a>Never</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">// 返回never的函数必须存在无法达到的终点</span><br><span class="line"><span class="keyword">function</span> error(message: string): never &#123;</span><br><span class="line">    throw new Error(message);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 推断的返回值类型为never</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fail</span></span>() &#123;</span><br><span class="line">    <span class="built_in">return</span> error(<span class="string">&quot;Something failed&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 返回never的函数必须存在无法达到的终点</span><br><span class="line"><span class="keyword">function</span> infiniteLoop(): never &#123;</span><br><span class="line">    <span class="keyword">while</span> (<span class="literal">true</span>) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="接口"><a href="#接口" class="headerlink" title="接口"></a>接口</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">interface Parent &#123;</span><br><span class="line">    name: string</span><br><span class="line">    age: number</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface child extends Parent &#123;</span><br><span class="line">    address: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const jibao:child = &#123;</span><br><span class="line">    name: <span class="string">&#x27;wangjingdong&#x27;</span>,</span><br><span class="line">    age: 5,</span><br><span class="line">    address: <span class="string">&#x27;xi`an&#x27;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">console.log(jibao.name)</span><br></pre></td></tr></table></figure>
+
+<h2 id="类"><a href="#类" class="headerlink" title="类"></a>类</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">class Article &#123;</span><br><span class="line">    public title: string // 公共</span><br><span class="line">    public detail?: string </span><br><span class="line">    <span class="built_in">readonly</span> author: string | number = <span class="string">&#x27;Jonh&#x27;</span> // 只读</span><br><span class="line">    // private intro?: string // 私有</span><br><span class="line">    protected protectedData?: string // 内部受保护的</span><br><span class="line">    // static 静态，是给类的本身，而不是类的实例</span><br><span class="line">    // private protected privateProtectedData: string = <span class="string">&#x27;privateProtectedData&#x27;</span></span><br><span class="line">    constructor (title: string, detail: string ) &#123;</span><br><span class="line">        this.title = title</span><br><span class="line">        this.detail = detail</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const bookA = new Article(<span class="string">&#x27;传奇&#x27;</span>,  <span class="string">&#x27;在那段战火纷飞,饱受苦难的年代，有一位伟大的地主家儿子......&#x27;</span>)</span><br><span class="line">console.log(bookA.author)</span><br><span class="line"></span><br><span class="line">class Mao extends Article &#123;</span><br><span class="line">    public role: string</span><br><span class="line">    constructor (title: string, detail: string, role: string) &#123;</span><br><span class="line">        super(title, detail)</span><br><span class="line">        this.role = role</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const mao = new Mao(<span class="string">&#x27;传奇&#x27;</span>, <span class="string">&#x27;在那段战火纷飞,饱受苦难的年代，有一位伟大的地主家儿子......&#x27;</span>, <span class="string">&#x27;Mr mao&#x27;</span>)</span><br><span class="line">console.log(mao)</span><br></pre></td></tr></table></figure>
+<h4 id="存储器属性"><a href="#存储器属性" class="headerlink" title="存储器属性"></a>存储器属性</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">class User &#123;</span><br><span class="line">    private _password: string = <span class="string">&#x27;&#x27;</span></span><br><span class="line">    get password (): string &#123;</span><br><span class="line">        <span class="built_in">return</span>  <span class="string">&#x27;******&#x27;</span> // this._password</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">set</span> password (value: string) &#123;</span><br><span class="line">        this._password = value</span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const userA = new User()</span><br><span class="line">console.log(userA.password)</span><br></pre></td></tr></table></figure>
+<h4 id="抽象类"><a href="#抽象类" class="headerlink" title="抽象类"></a>抽象类</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">&lt;blockquote&gt;用来作为子类基类去使用，规范格式的&lt;/blockquote&gt;</span><br><span class="line">abstract class Animal &#123;</span><br><span class="line">    name: string</span><br><span class="line">    constructor (name: string) &#123;</span><br><span class="line">        this.name = name</span><br><span class="line">    &#125;</span><br><span class="line">    abstract sayHi (): void</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">class Dog extends Animal &#123;</span><br><span class="line">    constructor (name: string) &#123;</span><br><span class="line">        super(name)</span><br><span class="line">    &#125;</span><br><span class="line">    sayHi (): void &#123;</span><br><span class="line">        console.log(<span class="string">&#x27;汪汪汪&#x27;</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const dog = new Dog(<span class="string">&#x27;旺财&#x27;</span>)</span><br><span class="line">dog.sayHi()</span><br></pre></td></tr></table></figure>
+<h4 id="类实现接口"><a href="#类实现接口" class="headerlink" title="类实现接口"></a>类实现接口</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">interface Fruit &#123;</span><br><span class="line">    color: string</span><br><span class="line">    get taste(): string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">interface Banana &#123;</span><br><span class="line">    price: number</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/** 如果使用继承extends,则无法同时继承多个类 */ </span><br><span class="line"></span><br><span class="line">class Apple implements Fruit, Banana &#123;</span><br><span class="line">    color: string = <span class="string">&#x27;red&#x27;</span></span><br><span class="line">    price: number = 100</span><br><span class="line">    get <span class="function"><span class="title">taste</span></span>() &#123;</span><br><span class="line">        <span class="built_in">return</span> <span class="string">&#x27;&#x27;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const apple = new Apple()</span><br><span class="line">console.log(apple)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#### 泛型类</span></span><br><span class="line">class myClass&lt;T&gt; &#123;</span><br><span class="line">    public value: T</span><br><span class="line">    constructor (value: T) &#123;</span><br><span class="line">        this.value = value</span><br><span class="line">    &#125;</span><br><span class="line">    processData (input: T):T &#123;</span><br><span class="line">        console.log(this.value)</span><br><span class="line">        <span class="built_in">return</span> input  </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">const myClassA = new myClass&lt;string&gt;(<span class="string">&#x27;一年级&#x27;</span>)</span><br><span class="line">console.log(myClassA.processData(<span class="string">&#x27;二年级&#x27;</span>))</span><br><span class="line"></span><br><span class="line">const myClassB = new myClass&lt;number&gt;(1)</span><br><span class="line">console.log(myClassB.processData(2))</span><br></pre></td></tr></table></figure>
+
+
+                
+                <p class="end">__END__</p>
+            </div>
+            <div class="article-footer">
+                <div class="suffix-box">
+    <div class="suffix-box-left">
+        <img src="/image/sidebar/avatar.png" alt="iLonge">
+    </div>
+    <div class="suffix-box-right">
+        <span class="suffix-box-title">文章作者：</span>iLonge
+        <br>
+        <span class="suffix-box-title">文章出处：</span><a href="/2025/09/13/Typescript/" target="_blank">Typescript 指北</a>
+        <br>
+        <span class="suffix-box-title">作者签名：</span>爱生活，iLonge。
+        <br>
+        <!-- <span class="suffix-box-title">关于主题：</span><a href="https://github.com/first19326/Hexo-LiveForCode" target="_blank">Hexo - Live For Code</a>
+        <br> -->
+        <span class="suffix-box-title">版权声明：</span>创作不易，转载请注明出处
+        <br>
+    </div>
+    <div style="clear: both;"></div>
+</div>
+                
+                    <div class="category">
+                        分类：
+                        
+                            <a href="/category/Typescript/">Typescript</a>
+                        
                     </div>
-                    <div class="tags-dark">
-                        <a href="/tag/Fiddler/" style="font-size: 12px; color: #666">Fiddler</a> <a href="/tag/Git/" style="font-size: 12px; color: #666">Git</a> <a href="/tag/Three-js/" style="font-size: 18.5px; color: #aaa">Three.js</a> <a href="/tag/Typescript/" style="font-size: 12px; color: #666">Typescript</a> <a href="/tag/pointLight/" style="font-size: 12px; color: #666">pointLight</a> <a href="/tag/xiaomi-su7/" style="font-size: 12px; color: #666">xiaomi su7</a> <a href="/tag/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" style="font-size: 12px; color: #666">学习笔记</a> <a href="/tag/%E6%96%87%E6%A1%A3/" style="font-size: 25px; color: #eee">文档</a> <a href="/tag/%E6%96%BD%E5%B7%A5%E6%96%B9%E6%A1%88/" style="font-size: 12px; color: #666">施工方案</a> <a href="/tag/%E7%94%9F%E6%B4%BB-%E6%B8%B8%E5%B1%B1%E7%8E%A9%E6%B0%B4/" style="font-size: 12px; color: #666">生活-游山玩水</a>
+                
+                
+                    <div class="tag">
+                        标签：
+                        
+                            <a href="/tag/%E6%96%87%E6%A1%A3/">文档</a>
+                        
+                            <a href="/tag/Typescript/">Typescript</a>
+                        
+                            <a href="/tag/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">学习笔记</a>
+                        
                     </div>
+                
+                <div class="article-prev-next">
+                    
+                    
+                        <a href="/2025/07/04/ZhuquePark/" class="next-prefix">» </a> 下一篇：    <a href="/2025/07/04/ZhuquePark/" title="发布于 2025-07-04 07:50">朱雀森林公园</a>
+                    
                 </div>
             </div>
+            
+    <div class="article-comments">
         
+            <div class="comments-title">
+                评论列表
+            </div>
+        
+        <div class="comments-content"></div>
+    </div>
+    
+ 
+        </div>
     
 </div>
     <div id="footer">
@@ -101,7 +203,7 @@
                     
                         <li class=""><a href="/category" class="" target="_self"><span class="iconfont icon-folder-fill"></span>分类</a></li>
                     
-                        <li class=" active "><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
+                        <li class=""><a href="/tag" class="" target="_self"><span class="iconfont icon-discount-fill"></span>标签</a></li>
                     
                         <li class=""><a href="/archive" class="" target="_self"><span class="iconfont icon-calendar-fill"></span>归档</a></li>
                     
